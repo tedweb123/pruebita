@@ -1,0 +1,368 @@
+@charset "utf-8";
+/* CSS Document */
+
+                                        /*CONTENIDO  MAIN*/
+        
+
+
+		#iframe iframe[src=""] { /*es como un onerror  si el src esta vacio el display este vacio por falta de internet se pone display none. o actua como un if  imagen src="vacio" pon su display en none*/
+	        display: none;
+			width: 0px;
+			height: 0px;
+		    border: none;
+			
+}
+		
+		#contenedorPadre{
+			display: flex;
+			
+			justify-content:center;
+			position: relative;
+            
+           
+		}
+		
+		#hijo1{
+			border: 4px solid green;
+}
+        
+        #abrirMenuClick{
+			display: flex;
+			justify-content:flex-start;
+			padding-top: 7px;
+			padding-left: 5px;
+           /* margin: auto;*/
+                /*background-image: url("../imagenes/Azuqueca-Iglesia_mormona.JPG");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: right;*/
+			
+		}   
+/*INICIO DE DIBUJO DE UBICACION DE LEERMAS*/
+@keyframes backInDown {
+  0% {
+    transform: translateY(-1200px) scale(.7);
+    opacity: .7;
+  }
+
+  80% {
+    transform: translateY(0px) scale(.7);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInDown {
+  
+  animation: backInDown 1.5s;
+ 
+  animation-timing-function: ease-out;
+}
+/*FIN DE DIBUJO DE UBICACION DE LEERMAS*/
+
+		.recorrido ul li > .ultimo:last-of-type:hover{
+			color: blue;
+		}
+		.recorrido .titu{
+			color: rgba(197,23,228,1.00);
+			font-weight: bold;
+		}
+		.recorridoVuelta ul li > .primero:last-of-type:hover{
+			color: blue;
+		}
+		.recorridoVuelta .titu{
+			color: rgba(56,120,199,1.00);
+			font-weight: bold;
+		}
+		
+        
+        p{
+            line-height: 1em;
+        }
+        
+        #horario{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+		
+        
+        ul{
+            padding: 13px;
+        }
+        
+        
+        .titu{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+		
+		
+ 
+		
+		
+        #leermas {
+			margin-left: 1em;
+            
+            transition: all .3s linear 0s;
+    
+    background-image:url("../imagenes/puntorojo.png");
+	background-repeat: no-repeat;
+	color: green;
+	
+	background-size: 0px 1px;
+	background-position: bottom left;
+  	
+}
+#leermas a{
+    text-decoration: none;
+}
+#leermas:hover{
+     background-size:100% 1px;
+}
+
+/*INICIO ANIMACION DE LEERMAS*/
+
+@keyframes backInRight {
+  0% {
+    transform: translateX(2000px) scale(.7);
+    opacity: .7;
+  }
+
+  80% {
+    transform: translateX(0px) scale(.7);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInRight {
+ 
+  animation: backInRight 2.5s;
+ 
+  animation-timing-function: ease-out;
+}
+/*FIN ANIMACION DE LEERMAS*/
+
+/*INICIO ANIMACION DE LEERMAS COMO MAQUINA DE ESCRIBIR*/
+.maquina_de_escribir{
+    float: left;
+    position: relative;
+}		
+
+.maquina_de_escribir span{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: rgba(255,255,255,1.00);
+    border-left: 1px solid white;
+    
+    animation-name: maquina-de-escribir;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+   
+    
+    
+}
+@keyframes maquina-de-escribir {
+    
+    from {
+        width: 110%;
+    }
+    
+}
+/*FIN ANIMACION DE LEERMAS COMO MAQUINA DE ESCRIBIR*/
+		
+        
+        #textoadicional {
+            border: 1px solid black;
+
+            width: 550px;
+            height: 0px;
+            overflow:hidden;
+            transition: height .600s linear 0s;
+            padding-left: 1em;
+            padding-right: 1em;
+}
+        #calculadoraltura {
+            overflow: hidden;
+}
+
+        #leermenos {
+            margin-left: 1em;
+            display: none;
+            
+            transition: all .3s linear 0s;
+    
+    background-image:url("../imagenes/puntorojo.png");
+	background-repeat: no-repeat;
+	color: green;
+	
+	background-size: 0px 1px;
+	
+            background-position: right bottom;
+}
+#leermenos:hover{
+    background-size:100% 1px;
+}
+#leermenos a{
+    text-decoration: none;
+}
+
+#calculadoraltura #direccion:hover{
+    cursor: pointer;
+}
+
+		#calculadoraltura p:nth-of-type(n+1)>br br:hover{
+			color: darkblue;
+			cursor:pointer;
+			font-weight: bold;
+		}
+		
+        
+        
+/*****************/
+		
+        
+        #calculadoraltura #span {
+            transform-origin: left center;
+            transform: scale(0,1);
+            transition: transform .2s linear 0s;
+            display: inline-block;
+}    
+        #calculadoraltura p:hover #span {
+             transform: scale(1);   
+             color:rgba(56,120,199,1.00);
+}
+        
+ 
+      /* ************ */
+#calculadoraltura p:nth-of-type(1){
+    display: inline-table;
+}
+#BanderaEspana {
+    position: relative;
+    display: inline-table;
+     margin-left: 1.5em;
+    margin-right: 1.5em;
+    top: -3px; /*mueve abajo o arriba*/
+}
+
+#BanderaEspana button {
+    
+   
+	left: 90px;
+    background: rgba(255,255,255,1.00);
+	padding: .25em .5em;
+	border: .7px solid red;
+	background-size: 0% 100%;
+	border-radius: .3em;
+	transform: rotate(90deg);
+	width: 25px;
+	height: 60px;
+}
+#BanderaEspana button:hover{
+	background-size:35% 100% ;  /*se ve una rayita horizontal espacio poner 51 101*/
+    
+    background-color:yellow;
+	background-image: url("../imagenes/puntorojo.png"),url("../imagenes/puntorojo.png");
+	background-repeat: no-repeat, no-repeat;
+	
+	background-position: left center, right center;
+}
+button{
+	transition: all .3s linear 0s;
+}
+#BanderaEspana button p{
+    position: absolute;
+    left: -13px; /*mueve arriba o abajo*/
+    bottom: 12px; /*mueve a la derecha o izquierda*/
+    transform: rotate(-90deg);
+    text-align: center;
+}   
+
+      #iframe{
+      
+			
+			align-self:flex-start;
+			top: 60px;
+			left: 1080px;
+			display: none;
+            
+                   
+        }
+        
+		
+    
+		
+		
+       /* @MEDIAS*/
+		
+        @media(max-width:600px){
+			h1{
+				font-size: .9em;
+			}
+		}
+
+@media(max-width:412px){  /*samsung galaxy s20 Ultra*/
+    body{
+        width: 400px;
+    }
+    #contenedorPadre{
+        display: flex;
+		
+        flex-direction: column;
+       
+        font-size: 7.5px;
+        
+    }
+    #abrirMenuClick{
+        display: flex;
+		width: 100%;
+        flex-direction: column;
+    }
+    .recorrido .titu{
+        sdisplay: flex;
+        text-align: center;
+    }
+    #hijo1{
+        sdisplay: flex;
+        width: 400px;
+    }
+    #album {
+	width: 400px;
+    }
+}
+
+@media(max-width:425px){
+    body{
+        width: 400px;
+    }
+    #contenedorPadre{
+        display: flex;
+        flex-direction: column;
+       
+        font-size: 7.5px;
+        
+    }
+    .recorrido .titu{
+        display: flex;
+        text-align: center;
+    }
+    #hijo1{
+        display: flex;
+        width: 400px;
+    }
+    #album {
+	width: 400px;
+    }
+}

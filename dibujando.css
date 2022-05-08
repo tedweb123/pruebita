@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+       
+ /*dibujo ubicacion google::::::::::::::::::::::::::::::::::::::*/
+   :root{
+    --heigth:25px;
+    --color:red;
+    --heigth1:115px;
+     }
+  .heart{
+    height: var(--heigth);
+    width: var(--heigth);
+    background-color: var(--color);
+    transform: rotate(315deg);
+    border-radius: 50%;
+    border-bottom-left-radius: 1.5%;
+    box-shadow: 3px 3px #888888;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    animation: latir .5s infinite ease-in-out alternate;
+     }
+
+/*casita de la ubicacion google*/
+
+
+#techo1{
+	position: absolute;
+	display: flex;
+	width: 10px;
+	height: 10px;
+	background: transparent;
+    border-left: 1px solid white;
+    border-top: 1px solid white;	
+	right: 4px;
+	top:5px;
+	transform: rotate(90deg); 
+	z-index: 100;
+
+}
+
+
+#casa1{
+	display: flex;
+	align-self:center;
+    background-color: rgba(255,255,255,1.00);
+    width: 12px;
+    height: 12px;
+    border-top-right-radius: 60%;
+	border-top-left-radius:  60%;
+	transform: rotate(45deg);
+    top: 70px;
+	border-bottom-left-radius: 1.5%;
+ 
+}
+#casa1 span{
+	display: flex;
+	justify-content: center;	
+	
+}
+#puerta{
+    position: absolute;
+    background-color: rgba(255,0,0,1.00);
+    width: 5px;
+    height: 5px;
+	bottom: 0px;
+	left: 3px;   /* mal con flex hacer*/	
+	
+}
+@keyframes latir{
+    100%{
+        transform:rotate(315deg) scale(1.2);
+    }
+}

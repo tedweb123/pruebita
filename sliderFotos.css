@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	box-sizing: border-box;
+}
+#album {
+    display: flex;
+	max-width: 900px;
+    height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 1px black;
+	margin-bottom: 5px;
+	position: relative;
+   
+}
+#album:hover {
+	cursor: not-allowed;
+}
+#album > img:first-of-type {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.ocupatodo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+#album > img {
+	opacity: 0;
+	transition: opacity 1s linear 0s
+}
+#boton{
+    
+    
+}

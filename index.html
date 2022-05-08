@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    
+
+<title>Barrio Guadalajara</title>
+<link href="css/comunes.css" rel="stylesheet" type="text/css">
+<link href="css/encabezado_header.css" rel="stylesheet" type="text/css">   
+<link href="css/main.css" rel="stylesheet" type="text/css">   
+<link href="css/dibujando.css" rel="stylesheet" type="text/css">   
+<link href="css/sliderFotos.css" rel="stylesheet" type="text/css">   	
+    
+  <!--  SCRIPT-->
+<script type="text/javascript"  src="js/sliderFotoJavascript.js" ></script>
+	
+	
+	
+<script type="text/javascript">
+        function mostrartexto() {
+            //le asigno la altura de calculadoraltura a texto adicional
+            textoadicional.style.height=calculadoraltura.offsetHeight+"px";
+            //escondo el boton leer mas
+            leermas.style.display="none";
+            //muestro el boton leer menos
+            leermenos.style.display="block";
+            // una vez terminada la transicion , cambio a auto la altura del contenedor textoadicional para que se adapte al ancho en el caso de que lo cambie el usuario . le doy 10 milisegundos mas que a la transition
+            setTimeout(function() {textoadicional.style.height="auto" },610);//actua el settimeout como un retardo de tiempo para que el texto aparesca con 610 
+        }
+        function escondertexto() {
+            // le asigno a textoadicional su propi alatura para que su transicion no comience en auto
+            textoadicional.style.height=textoadicional.offsetHeight+"px";
+            // sino cambio la altura a 0 transcurridos 20 milisegundos nose ejecutara ña transicion 
+            setTimeout(function() {textoadicional.style.height="";},20);//actua el settimeout como un retardo de tiempo para que el texto desaparesca con 20 
+            //vuelvo a mostra el boton leer mas restaurando el css
+            leermas.style.display="";
+            //vuelvo a esconder el boton leer menos
+            leermenos.style.display="";
+        }
+        
+         function mostrarIframe() {
+			document.getElementById('iframe').style.display = 'block';
+             document.getElementById('albunFotos').style.display='none';
+			
+		}   
+		
+		function mostrarGuada(){
+			document.getElementById('iframe').style.display ='none';
+            document.getElementById('albunFotos').style.display='block';
+		}
+                                                                                                                                 
+    </script>
+	
+</head>
+
+<body onload="terminacarga();">
+    <div id="cargando">
+        <div id="imagenCargador"></div>
+    
+    </div>
+    
+    <script type="text/javascript" >
+        window.onload=function(){
+            var contenedor=document.getElementById('cargando');
+            contenedor.style.visibility='hidden';
+             contenedor.style.opacity='0';
+        }
+        </script>
+    
+    
+	<header id="encabezado" onmouseover="muestraencabezado();" onmouseout="ocultaencabezado();">
+		<img src="https://cdn.pixabay.com/photo/2020/12/13/21/51/jesus-5829481__340.png" alt="" onerror="this.style.display='none';">
+        
+		<h1 class="animated backInDown" >La Iglesia de Jesucristo de los Santos de los Ultimos Dias <marquee style="display:inline-block; font-size: 10px; color: #FFFFFF" bgcolor="#000080" scrollamount="2" behavior="alternate">Haga Click en los enlaces para ver los horarios</marquee></h1>
+        
+        <aside>esta barra horizontal es etiqueta ASIDE , EL maus PASA  encima mio, aparece el header con menu</aside>
+       
+	</header>
+   
+   <main id="cuerpo">
+     <div id="contenedorPadre">
+       <div id="hijo1">
+		   
+    	  <div id="abrirMenuClick">
+			
+            <div class="animated backInDown">		  
+           <div class="heart">
+		     <div id="techo1" ></div>
+             <div id="casa1"><span id="puerta"></span></div>
+  			</div>  
+                </div>	
+			  
+            <p id="leermas" class="maquina_de_escribir  animated backInRight" onClick="mostrarGuada();"> <a href="javascript: mostrartexto()"> Barrio de Guadalajara <span>&#160;</span> </a>  
+              </p> 
+			  
+            <p id="leermenos" onClick="mostrarGuada();">
+            <a href="javascript: escondertexto()">El Barrio de Guadalajara en la Capilla de Azuqueca de Henares</a>
+            </p>
+			  
+        
+	      </div>
+    
+          <div id="textoadicional">
+           
+            <div id="calculadoraltura">     
+ 
+            <p>Estaca <div id="BanderaEspana">
+	        <button><p>España</p></button>
+	         </div>Madrid Este. Avenida castilla 7 C. posterior, Guadalajara.</p>
+               <!-- <div id="imagen_iglesia_bus">-->
+                   <!--<img  id="imageniglesia" src="imagenes/Azuqueca-Iglesia_mormona.JPG" width="100" height="75" alt=""/>-->
+                
+
+            <p id="direccion"> <br><br>Direccion en Azuqueca de Henares. <span id="span">Av. Virgen de las Nieves,19. 19200 </span></p>
+
+            <p>Horarios y Paradas de autobus, hacia la capilla de Azuqueca, cada Domingo</p>
+
+            <div id="horario">
+                  
+                <div class="recorrido">
+                    
+	               <ul><span class="titu animated backInDown">IDA (de Guadalajara a Azuqueca)</span>
+		
+                        <li onclick="mostrarIframe();">10:40 Parada en <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d756.9418534010996!2d-3.1728595119802363!3d40.63501101643157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7c06a5fc4718c0e1!2zNDDCsDM4JzA2LjAiTiAzwrAxMCcyMC4zIlc!5e0!3m2!1ses!2ses!4v1648413059238!5m2!1ses!2ses" target="marcodestino" onerror="this.style.display='none';" > Avenida del Ejército frente al Plaza Día </a>(sólo sube Luis).</li>
+                        <li onclick="mostrarIframe();">10:55 Parada en <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.148585390945!2d-3.1718950505030796!3d40.62660505067359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb55e51833a6fb72!2zNDDCsDM3JzM1LjgiTiAzwrAxMCcxMC45Ilc!5e0!3m2!1ses!2ses!4v1648413509291!5m2!1ses!2ses" target="marcodestino">Avenida Castilla frente a AhorraMas.</a></li>
+                        <li onclick="mostrarIframe();">11:05 Parada en <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1514.000134643545!2d-3.1804393420852315!3d40.62987603045067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c226784c3085342!2zNDDCsDM3JzQ3LjYiTiAzwrAxMCc0NS42Ilc!5e0!3m2!1ses!2ses!4v1648413992609!5m2!1ses!2ses" target="marcodestino">Avenida del Ejercito Family Cash.</a></li>
+
+                        <li onclick="mostrarIframe();">Llegada a <a class="ultimo" href="https://www.google.com/maps/embed?pb=!4v1648414177575!6m8!1m7!1szS8cm7rMfcdnWqfgDQTGxQ!2m2!1d40.57682851827978!2d-3.262220518391285!3f353.07367347502645!4f-0.31372681825453697!5f0.7820865974627469" target="marcodestino">Azuqueca 11:20. am</a></li>
+           
+          
+                   </ul>
+ 
+	          </div>
+    
+	         <div class="recorridoVuelta">
+        
+                       <ul><span class="titu">VUELTA (de Azuqueca a Guadalajara)</span>
+                            <li onclick="mostrarIframe();">Salida de<a class="primero" href="https://www.google.com/maps/embed?pb=!4v1648414177575!6m8!1m7!1szS8cm7rMfcdnWqfgDQTGxQ!2m2!1d40.57682851827978!2d-3.262220518391285!3f353.07367347502645!4f-0.31372681825453697!5f0.7820865974627469" target="marcodestino"> Azuqueca 13:45 pm.</a></li> 
+                            <li onclick="mostrarIframe();">Parada en <a  href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1514.000134643545!2d-3.1804393420852315!3d40.62987603045067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c226784c3085342!2zNDDCsDM3JzQ3LjYiTiAzwrAxMCc0NS42Ilc!5e0!3m2!1ses!2ses!4v1648413992609!5m2!1ses!2ses" target="marcodestino">Avenida del Ejército Family Cash. </a> </li>
+								
+                            <li onclick="mostrarIframe();">Parada en <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.148585390945!2d-3.1718950505030796!3d40.62660505067359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb55e51833a6fb72!2zNDDCsDM3JzM1LjgiTiAzwrAxMCcxMC45Ilc!5e0!3m2!1ses!2ses!4v1648413509291!5m2!1ses!2ses" target="marcodestino">Avenida Castilla frente a AhorraMas.</a></li>
+                            <li onclick="mostrarIframe();">Parada en <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d756.9418534010996!2d-3.1728595119802363!3d40.63501101643157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7c06a5fc4718c0e1!2zNDDCsDM4JzA2LjAiTiAzwrAxMCcyMC4zIlc!5e0!3m2!1ses!2ses!4v1648413059238!5m2!1ses!2ses" target="marcodestino"  >Avenida del Ejército frente al Plaza Día (sólo baja Luis). </a></li>
+
+                        </ul>
+	
+	         </div>
+	     </div>
+	 	
+	     <p>Obispo <span>telefono8754397</span></p>
+        
+          </div>
+         </div>
+       </div>
+       
+     <div id="albunFotos" >
+         
+        <div id="album" onMouseOver="detenanimacion()" onMouseOut="lanzaanimacion()">
+            <img id="foto1" src="imagenes/img1.jpg" width="40px" height="70px" alt="seta">
+            <img id="foto2" class="ocupatodo" src="imagenes/img2.jpg" width="40px" height="70" alt="seta">
+            <img id="foto3" class="ocupatodo" src="imagenes/img3.jpg" width="40px" height="70" alt="seta">
+            <img id="foto4" class="ocupatodo" src="imagenes/img4.jpg" width="40px" height="70" alt="seta">
+            <img id="foto5" class="ocupatodo" src="imagenes/img5.jpg" width="50" height="70" alt="seta">
+            <img id="foto6" class="ocupatodo" src="imagenes/img6.jpg" width="50" height="70" alt="seta">
+            <img id="foto7" class="ocupatodo" src="imagenes/img7.jpg" width="50" height="70" alt="seta">
+            <img id="foto8" class="ocupatodo" src="imagenes/img8.jpg" width="50" height="70" alt="seta">
+            <img id="foto9" class="ocupatodo" src="imagenes/img9.jpg" width="50" height="70" alt="seta">
+            <img id="foto10" class="ocupatodo" src="imagenes/img10.jpg" width="50" height="70" alt="seta">
+            <img id="foto11" class="ocupatodo" src="imagenes/img11.jpg" width="50" height="70" alt="seta">
+	   </div> 
+       <button id="boton" onClick="btn();">Parar</button>
+   </div>
+		 
+		<div id="iframe">
+			<iframe   name="marcodestino"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48446.3291838611!2d-3.208191942940325!3d40.6321848610623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43ac63987ff53b%3A0x800a702e2c07492e!2sGuadalajara!5e0!3m2!1ses!2ses!4v1648154714881!5m2!1ses!2ses" onerror="this.style.display='none';"  width="450" height="550" style="border:0;" allowfullscreen="" loading="lazy"  ></iframe>
+		</div> 
+          
+    </div>           
+    </main>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quas corrupti nemo nulla, delectus, laboriosam eos. Inventore obcaecati quaerat odio voluptas, debitis vitae pariatur, porro harum dolor sapiente, facere. Assumenda illum recusandae perferendis facilis mollitia commodi aliquam non dignissimos libero inventore ea minus nesciunt aperiam asperiores ut eligendi quisquam nihil, unde aspernatur, dolorum quaerat tenetur fugiat cupiditate. Facere hic, voluptatibus ipsa eius odit dicta repellat, ad minus quia. Unde rem, provident dolorem repudiandae ex nihil sunt, beatae vero fugit, quisquam, non magni consequatur. Sint incidunt, fugiat suscipit dicta distinctio alias non necessitatibus dolores iste? Veritatis sunt amet earum, cumque fuga rerum deleniti voluptates porro natus totam beatae sapiente excepturi perferendis at, facere odio maxime alias. Error ex vitae, eaque quae omnis eum natus ipsam reprehenderit sed cupiditate porro fuga repellat officia voluptates et laboriosam aspernatur quasi, dolor eligendi. Harum suscipit, et quibusdam dignissimos libero consectetur deserunt, repellendus magnam commodi rem. Eos aperiam labore odio iusto, omnis ex voluptas, doloribus dolor quis deserunt perferendis cum voluptatem soluta nobis eligendi nam ipsa optio repudiandae mollitia rerum cumque pariatur unde est. Sint non ad, iusto, quod vel asperiores dolorum? Similique asperiores quasi nam quas quidem, officiis atque odio, blanditiis mollitia dolores rem, sed maiores ipsam omnis consectetur. Modi dolorem dolorum necessitatibus excepturi aspernatur et, magnam vitae soluta dolores expedita asperiores accusantium quibusdam ipsum nihil mollitia porro, earum, saepe facilis repellendus amet magni. Tenetur fugit delectus nobis modi aspernatur officia illum cum magni deleniti maxime, quidem laboriosam ea reprehenderit in possimus rem recusandae. Excepturi nesciunt aliquid ipsum odio. Nesciunt nemo, aperiam quisquam culpa commodi placeat odio eaque quas eveniet laborum. Odit placeat voluptas in, accusamus voluptatem expedita autem, doloribus facere vitae a sit velit magnam aperiam dolores illo tempore corporis? Animi reprehenderit veritatis maiores doloremque! Neque sapiente doloribus voluptatum necessitatibus doloremque maxime animi et perspiciatis odit consectetur voluptates quam suscipit, ut quia impedit iure laboriosam veritatis eius rem obcaecati est voluptas recusandae. Culpa ab ipsum assumenda inventore dolor ratione ea sed earum aperiam libero praesentium dolorum reprehenderit, itaque numquam autem corporis est, deleniti debitis? Fugiat corporis porro incidunt veritatis reprehenderit numquam tempora. Veritatis non, unde tempore. Laborum quaerat reiciendis quia veritatis veniam modi totam, omnis amet distinctio unde facilis aperiam accusamus aut, perferendis libero, velit maxime! Vel officiis animi ratione minus maxime atque nostrum recusandae modi sint iste, tenetur hic reiciendis minima voluptas ipsam unde, odit temporibus quae explicabo, architecto molestias qui! Sed rem, dignissimos minus nihil aut reiciendis cupiditate veritatis deleniti quis voluptatum, ullam magni impedit veniam doloremque labore ipsum perferendis optio iste. Debitis id perspiciatis asperiores impedit vitae nihil. Aperiam repellat magni delectus debitis excepturi nemo provident vero voluptatibus repudiandae iure magnam, perspiciatis inventore ex quidem quod ratione ab? Eaque ratione tempore quos nesciunt mollitia vero, sed aperiam, dolor dolorem, laboriosam animi et quod dolore. Repudiandae illo, reiciendis vero. Ducimus dolor odit est, hic eos sint harum placeat deserunt autem, sapiente, dolore quia totam quidem enim alias recusandae blanditiis omnis officia quaerat numquam eligendi voluptatum tempora. Odit cumque, qui illum ipsa quaerat.</p>
+	
+	
+	
+	<footer>
+		
+        <a href="tel:635017593" title="llamame" target="_self" ><span>&copy;eduardo enrique aguilar valcarcel</span></a>
+	</footer>
+    
+</body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+</html>

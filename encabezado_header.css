@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+                                        /* ENCABEZADO*/
+	header{
+            
+			display: flex;
+			justify-content: space-around;
+		    overflow: hidden;   /*este  ampliaba el header y escondia el margen superior de h1 que si no ponia overflow el h1 se salia y se veia una columna horizontal blanca antes de header .. pero tambien lo podia arrgelar con un span qu eno tienen margenes. ni top booton ni derecha ni izquierda.*/
+			background-color:rgba(197,23,228,1.00);
+			
+			height: 100px;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            transition: transform .2s linear 0s;
+			
+		}
+		
+        header> img{
+            background-color:rgba(197,23,228,1.00);
+        }
+        header aside{
+	position: absolute;
+	top: 100%;
+	left:0px;
+	height: 1.5em;
+	width: 100%;
+	background:rgba(226,138,249,1.1);
+	text-align: center;
+	opacity: 0.6;
+	
+}        
+
+		h1{
+			
+			text-align: center;
+
+			font-size:2em;
+			color: white;
+           
+		}
+
+/*INICA ANIMACION DE H1 */
+@keyframes backInDown {
+  0% {
+    transform: translateY(-1200px) scale(.7);
+    opacity: .7;
+  }
+
+  80% {
+    transform: translateY(0px) scale(.7);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInDown {
+ /* -webkit-animation: backInDown 1.5s;*/
+  animation: backInDown 1.5s;
+ /* -webkit-animation-timing-function: ease-out;*/
+  animation-timing-function: ease-out;
+}
+/*FIN ANIMACION DE H1 */
+       marquee{
+            background: rgba(197,23,228,1.00);
+}
+	   
+		
+		img{
+			width: 90px;
+			height: 90px;
+		}
